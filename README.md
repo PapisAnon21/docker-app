@@ -9,7 +9,7 @@
   execute the docker-compose file
   ```
   ```
-  Follovw this procedures for execution
+  Follovw this procedures during execution
   docker-compose up -d database
   docker-compose up -d backend
 

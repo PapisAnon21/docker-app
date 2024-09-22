@@ -16,6 +16,9 @@ connection = mysql.connector.connect(host=os.environ["DATABASE_HOST"],
                                          password=os.environ["DATABASE_PASSWORD"])
 
 
+
+
+
 def create_table_if_not_exist():
     try:
         

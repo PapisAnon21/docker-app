@@ -4,27 +4,19 @@ services:
     image: mysql
     container_name: database
     restart: unless-stopped
-    env_file: ./.env
-    environment:
-      - MYSQL_ROOT_USER=$DATABASE_USER
-      - MYSQL_ROOT_PASSWORD=$DATABASE_PASSWORD
-      - MYSQL_DATABASE=$DATABASE
+    env_file: ./.database.env
     networks:
       - papisNetwork
 
   backend:
     depends_on:
       - database
-    image: papis212/user-app 
-    container_name: app_user_c
-    env_file: ./.env
+    image: user-app-test
+    container_name: backend
+    env_file: ./.backend.env
     ports:
       - $APP_LOCAL_PORT:$APP_DOCKER_PORT
-    environment:
-      - DATABASE_HOST=$DATABASE_HOST
-      - DATABASE=$DATABASE
-      - DATABASE_USER=$DATABASE_USER
-      - DATABASE_PASSWORD=$DATABASE_PASSWORD
+  
     networks:
       - papisNetwork
 
