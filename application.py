@@ -7,4 +7,4 @@ app.include_router(router, prefix="/user")
 
 @app.get("/", tags=["Home"])
 async def home():
-    return {"message" : "You're in home place"}
+    return {"message" : "Vous etes sur la page d'acceuil . Ajoutez à l'url /docs pour voir le swagger en place"}
