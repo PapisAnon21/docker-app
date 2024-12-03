@@ -60,10 +60,10 @@ jobs:
     needs: setup-app
 
     steps:
-      - name: Recuperation du code , Debut du deploiement dans heroku
-        uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.13.15
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}   
-          heroku_email: ${{secrets.HEROKU_EMAIL_ADRESS}}
+      - name: Deployment sur Heroku
+        run: |
+          git push heroku master
+        env:
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          HEROKU_APP_NAME: ${{secrets.HEROKU_APP_NAME}} 
+          HEROKU_EMAIL_ADRESS: ${{secrets.HEROKU_EMAIL_ADRESS}}
