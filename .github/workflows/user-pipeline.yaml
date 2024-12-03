@@ -29,7 +29,7 @@ jobs:
 
       - name: Debut du scan de l'application avec trivy
         run: |
-          trivy fs . --skip-update --format json -o trivy-results.json
+          trivy fs . --format json -o trivy-results.json
           
       - name: Upload Trivy Report as artifact
         uses: actions/upload-pages-artifact@v3
