@@ -1,3 +1,4 @@
 dockerhubid=papis212
 imageName=papis212/user-app
 lienComplet=https://hub.docker.com/repository/docker/papis212/user-app/general
+Mise en place du pipeline pour le deploiement de user app : le 03/12/2024
