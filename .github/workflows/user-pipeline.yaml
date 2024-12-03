@@ -32,7 +32,7 @@ jobs:
           trivy fs . --skip-update --format json -o trivy-results.json
           
       - name: Upload Trivy Report as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           name: trivy-report
           path: trivy-results.json
