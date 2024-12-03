@@ -24,6 +24,6 @@ def add_user(user : UserModel = Body(...)):
     user_create = "test without database"
     if(user_create):
         return user_create
-    return "User not created !"
+    return "User not created !!"
 
 
