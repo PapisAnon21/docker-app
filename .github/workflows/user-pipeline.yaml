@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: trivy-report
-          path: /trivy-results
+          path: /workflows
 
   setup-app:
     runs-on: ubuntu-latest
